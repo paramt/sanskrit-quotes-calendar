@@ -41,8 +41,19 @@
   </head>
 
   <body onload="selectSlide();">
+	  
+<div class="container">
+<div class="row">
+    
+        <div class="col-md-6">
+		
     <div id="carousel" class="carousel slide" data-ride="carousel">
-
+ <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                     <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div id="1" class="item">
@@ -163,6 +174,9 @@
 
         <div id="30" class="item">
           <img src="img/30.jpg" alt="Image">
+		<div class="carousel-caption">
+                            <p>त्रिंशत् ३० triMzat</p>
+                </div>
         </div>
 
         <div id="31" class="item">
@@ -182,7 +196,10 @@
       </a>
 
     </div>
-
+   </div>
+    
+</div>
+</div>
     <script>
       function selectSlide(){
         document.getElementById(new Date().getDate()).className="item active";
