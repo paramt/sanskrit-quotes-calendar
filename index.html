@@ -58,6 +58,8 @@
               <a class="btn btn-primary" href="http://www.gq31.gq">Today</a>
               <a id="toggle-btn" class="btn btn-primary" href="javascript:void(0);" onclick="togglePlay();return false;"
               rel="noopener">Play</a>
+<a id="toggle-btn" class="btn btn-primary" href="javascript:void(0);" onclick="splay();return false;"
+              rel="noopener">Audio</a>
               <a class="btn btn-primary" href="http://samskritabharati.org" rel="noopener" target="_blank">Samskrita Bharati</a></div>
             </div>
             <div style="margin-left: 2em" class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -178,9 +180,20 @@
         <div class="col-md-1"></div>
       </div>
     </div>
+	  <audio id="s">
+		  <source id="sr" type="audio/mp3"></source>
+	  </audio>
     <script>
+	    function splay(){
+		     var currdat=new Date().getDate();
+		    var aud = document.getElementById("s");
+		    var sr=document.getElementById("sr");
+		    sr.src="res/"+currdat+".mp3";
+		    aud.play();
+	    }
       function selectSlide(){
-        document.getElementById(new Date().getDate()).className='item active';
+	      var currdat=new Date().getDate();
+        document.getElementById(currdat).className='item active';
         $('.carousel').carousel('pause');
       }
 
