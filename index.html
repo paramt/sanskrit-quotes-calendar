@@ -60,6 +60,8 @@
               rel="noopener">Play</a>
 <a id="toggle-btn" class="btn btn-primary" href="javascript:void(0);" onclick="splay();return false;"
               rel="noopener">Audio</a>
+<a id="toggle-btn" class="btn btn-primary" href="javascript:void(0);" onclick="tplay();return false;"
+              rel="noopener">Meaning</a>
               <a class="btn btn-primary" href="http://samskritabharati.org" rel="noopener" target="_blank">Samskrita Bharati</a></div>
             </div>
             <div style="margin-left: 2em" class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -183,12 +185,23 @@
 	  <audio id="s">
 		  <source id="sr" type="audio/mp3"></source>
 	  </audio>
+	 <audio id="t">
+		  <source id="tr" type="audio/mp3"></source>
+	  </audio>
     <script>
 	    function splay(){
 		     var currdat=new Date().getDate();
 		    var aud = document.getElementById("s");
 		    var sr=document.getElementById("sr");
 		    sr.src="res/s"+currdat+".mp3";
+		    aud.load();
+		    aud.play();
+	    }
+	   function tplay(){
+		     var currdat=new Date().getDate();
+		    var aud = document.getElementById("t");
+		    var tr=document.getElementById("tr");
+		    tr.src="res/t"+currdat+".mp3";
 		    aud.load();
 		    aud.play();
 	    }
