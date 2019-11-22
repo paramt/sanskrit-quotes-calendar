@@ -198,7 +198,7 @@
 		    aud.play();
 	    }
 	   function tplay(){
-		     var currdat=new Date().getDate();
+		     var currdat=$(".active")[0].getAttribute("id")
 		    var aud = document.getElementById("t");
 		    var tr=document.getElementById("tr");
 		    tr.src="res/t"+currdat+".mp3";
