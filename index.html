@@ -190,7 +190,7 @@
 	  </audio>
     <script>
 	    function splay(){
-		     var currdat=new Date().getDate();
+		     var currdat=$(".active")[0].getAttribute("id")
 		    var aud = document.getElementById("s");
 		    var sr=document.getElementById("sr");
 		    sr.src="res/s"+currdat+".mp3";
