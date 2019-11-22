@@ -183,11 +183,18 @@
 		  <source id="tr" src="res/t1.mp3" type="audio/mp3">
 	  </audio>
     <script>
+	    function pauseother(){
+		var audios = document.getElementsByTagName('audio');
+    		for(var i = 0, len = audios.length; i < len;i++){
+        	    audios[i].pause();
+    		}
+	    }
 	    function splay(){
 		     var currdat=$(".active")[0].getAttribute("id")
 		    var aud = document.getElementById("s");
 		    var sr=document.getElementById("sr");
 		    sr.src="res/s"+currdat+".mp3";
+		    pauseother();
 		    aud.load();
 		    aud.play();
 	    }
@@ -196,6 +203,7 @@
 		    var aud = document.getElementById("t");
 		    var tr=document.getElementById("tr");
 		    tr.src="res/t"+currdat+".mp3";
+		   pauseother();
 		    aud.load();
 		    aud.play();
 	    }
