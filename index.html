@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <meta name="generator"
     content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
     <title>subhASitam । सुभाषितम् । Good Quote</title>
@@ -26,7 +27,6 @@
     <meta name="msapplication-TileImage" content="fav/favicon-144.png" />
     <meta name="msapplication-config" content="fav/browserconfig.xml" />
     <!-- ****** faviconit.com favicons ****** -->
-    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="description" content="Calendar of Daily subhASitam । सुभाषितम् । Good Quote" />
@@ -54,18 +54,14 @@
         <div class="col-md-10">
           <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
             <div class="navbar-nav-scroll">
-              <div style="margin-left: 2em" class="navbar-nav bd-navbar-nav flex-row">
+             <div style="margin-left: 2em" class="navbar-nav bd-navbar-nav flex-row">
               <a class="btn btn-primary" href="http://www.gq31.gq">Today</a>
-              <a id="toggle-btn" class="btn btn-primary" href="javascript:void(0);" onclick="togglePlay();return false;"
-              rel="noopener">AutoScroll</a>
-<a id="toggle-btn" class="btn btn-primary" href="javascript:void(0);" onclick="splay();return false;"
-              rel="noopener">subhASitam Audio</a>
-<a id="toggle-btn" class="btn btn-primary" href="javascript:void(0);" onclick="tplay();return false;"
-              rel="noopener">Meaning Audio</a>
-              <a class="btn btn-primary" href="http://samskritabharati.org" rel="noopener" target="_blank">Samskrita Bharati</a></div>
-              <a class="btn btn-primary"
-              href="https://twitter.com/intent/tweet?text=uttamam+उत्तमम्+Great+website+https%3A%2F%2Fgq31.gq+that+shows+%27subhASitam+सुभाषितम्+Good+Quote%27+of+the+day&url=http%3A%2F%2Fgq31.gq"
-              data-size="large" target="_blank">Tweet</a>
+              <a id="toggle-btn" class="btn btn-primary" href="javascript:void(0);" onclick="togglePlay();return false;" rel="noopener">AutoScroll</a>
+	      <a class="btn btn-primary" href="javascript:void(0);" onclick="splay();return false;" rel="noopener">subhASitam Audio</a>
+	      <a class="btn btn-primary" href="javascript:void(0);" onclick="tplay();return false;" rel="noopener">Meaning Audio</a>
+              <a class="btn btn-primary" href="http://samskritabharati.org" rel="noopener" target="_blank">Samskrita Bharati</a>
+	      <a class="btn btn-primary" href="https://twitter.com/intent/tweet?text=uttamam+उत्तमम्+Great+website+https%3A%2F%2Fgq31.gq+that+shows+%27subhASitam+सुभाषितम्+Good+Quote%27+of+the+day&url=http%3A%2F%2Fgq31.gq" data-size="large" target="_blank">Tweet</a>
+	     </div>
             </div>
           </header>
         </div>
@@ -181,10 +177,10 @@
       </div>
     </div>
 	  <audio id="s">
-		  <source id="sr" type="audio/mp3"></source>
+		  <source id="sr" src="res/s1.mp3" type="audio/mp3">
 	  </audio>
 	 <audio id="t">
-		  <source id="tr" type="audio/mp3"></source>
+		  <source id="tr" src="res/t1.mp3" type="audio/mp3">
 	  </audio>
     <script>
 	    function splay(){
@@ -208,9 +204,7 @@
         document.getElementById(currdat).className='item active';
         $('.carousel').carousel('pause');
       }
-
       var play = false;
-
       function togglePlay(){
         if(play){
           $('#carousel').carousel('pause');
@@ -222,7 +216,6 @@
           play = true;
         }
       }
-
 </script>
   </body>
 </html>
